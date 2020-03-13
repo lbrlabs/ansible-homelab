@@ -1,6 +1,7 @@
-- import_playbook: server.yml
-- import_playbook: server.yml
-
-- hosts: all
+- name: Base Install
+  hosts: all
+  become: yes
+  become_method: sudo
   roles:
-    - role: geerlingguy.docker
+    - common
+    - geerlingguy.docker

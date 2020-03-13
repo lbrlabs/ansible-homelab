@@ -1,0 +1,14 @@
+- name: IP forwarding on
+  sysctl:
+    name: net.ipv4.ip_forward
+    value: '1'
+    sysctl_set: yes
+    state: present
+    reload: yes
+- name: rp_filter on
+  sysctl:
+    name: net.ipv4.conf.all.rp_filter
+    value: '1'
+    sysctl_set: yes
+    state: present
+    reload: yes

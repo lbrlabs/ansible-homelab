@@ -1,3 +1,0 @@
-- hosts: micro
-  roles:
-    - role: geerlingguy.docker
